@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center pt-24 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -99,18 +99,18 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Floating Cards */}
+          {/* Right Content - Enhanced Floating Cards */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative h-[600px]"
           >
-            {/* Main Card */}
+            {/* Main Achievement Card */}
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="bg-white rounded-3xl shadow-2xl p-8 relative z-10"
+              className="bg-white rounded-3xl shadow-2xl p-8 relative z-10 max-w-sm"
             >
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
@@ -137,26 +137,130 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            {/* Floating Elements */}
+            {/* Student Stats Card */}
             <motion.div
-              animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 bg-gradient-to-r from-pink-400 to-red-400 rounded-2xl p-4 shadow-lg"
+              animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+              className="absolute top-16 -right-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-6 shadow-xl z-20"
             >
-              <Users className="w-8 h-8 text-white" />
+              <div className="text-center text-white">
+                <Users className="w-8 h-8 mx-auto mb-2" />
+                <div className="text-2xl font-bold">2.5K+</div>
+                <div className="text-sm opacity-90">Active Students</div>
+              </div>
             </motion.div>
 
+            {/* Success Rate Card */}
             <motion.div
-              animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-4 shadow-lg"
+              animate={{ y: [0, 12, 0], rotate: [0, -3, 0] }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+              className="absolute top-64 -left-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-6 shadow-xl z-20"
             >
-              <TrendingUp className="w-8 h-8 text-white" />
+              <div className="text-center text-white">
+                <TrendingUp className="w-8 h-8 mx-auto mb-2" />
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-sm opacity-90">Success Rate</div>
+              </div>
             </motion.div>
 
-            {/* Background Gradient Orbs */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-32 h-32 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-20 blur-3xl" />
+            {/* Live Classes Card */}
+            <motion.div
+              animate={{ y: [0, -8, 0], scale: [1, 1.05, 1] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1.5,
+              }}
+              className="absolute bottom-20 right-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl p-5 shadow-xl z-20"
+            >
+              <div className="text-center text-white">
+                <Play className="w-7 h-7 mx-auto mb-2" />
+                <div className="text-lg font-bold">Live</div>
+                <div className="text-xs opacity-90">Classes</div>
+              </div>
+            </motion.div>
+
+            {/* Expert Teachers Card */}
+            <motion.div
+              animate={{ y: [0, -15, 0], x: [0, -3, 0] }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2,
+              }}
+              className="absolute bottom-8 left-12 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl p-5 shadow-xl z-20"
+            >
+              <div className="text-center text-white">
+                <Star className="w-7 h-7 mx-auto mb-2 fill-current" />
+                <div className="text-lg font-bold">50+</div>
+                <div className="text-xs opacity-90">Expert Teachers</div>
+              </div>
+            </motion.div>
+
+            {/* Notification Card */}
+            {/* <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 3 }}
+              className="absolute top-4 left-8 bg-white rounded-xl p-4 shadow-lg border-l-4 border-green-500 z-30"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">
+                    New Achievement!
+                  </p>
+                  <p className="text-xs text-gray-600">
+                    Rahul scored 98% in JEE
+                  </p>
+                </div>
+              </div>
+            </motion.div> */}
+
+            {/* Enhanced Background Gradient Orbs */}
+            <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-10 blur-3xl" />
+            <div className="absolute -bottom-32 -left-32 w-48 h-48 bg-gradient-to-r from-pink-400 to-red-400 rounded-full opacity-15 blur-3xl" />
+            <div className="absolute top-1/2 right-0 w-32 h-32 bg-gradient-to-r from-yellow-300 to-orange-400 rounded-full opacity-10 blur-2xl" />
+            <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gradient-to-r from-green-400 to-cyan-400 rounded-full opacity-12 blur-2xl" />
+
+            {/* Floating Particles */}
+            <motion.div
+              animate={{ y: [0, -100, 0], opacity: [0, 1, 0] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-400 rounded-full"
+            />
+            <motion.div
+              animate={{ y: [0, -80, 0], opacity: [0, 1, 0] }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2,
+              }}
+              className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full"
+            />
+            <motion.div
+              animate={{ y: [0, -60, 0], opacity: [0, 1, 0] }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 4,
+              }}
+              className="absolute top-1/2 right-1/3 w-1 h-1 bg-pink-400 rounded-full"
+            />
           </motion.div>
         </div>
       </div>

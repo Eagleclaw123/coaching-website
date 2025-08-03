@@ -14,6 +14,8 @@ body {
   line-height: 1.6;
   color: #1a1a1a;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .gradient-bg {
@@ -49,4 +51,11 @@ body {
   50% {
     transform: translateY(-20px);
   }
+}
+/* Gradient Canvas Styles */
+#gradient-canvas {
+  --gradient-color-1: #ef008f;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #7038ff;
+  --gradient-color-4: #ffba27;
 }
