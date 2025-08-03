@@ -36,13 +36,15 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 w-full z-50 overflow-hidden"
-      style={{ height: "80px" }}
+      className={`fixed top-0 w-full z-50 ${
+        isMenuOpen ? "overflow-visible" : "overflow-hidden"
+      }`}
+      style={{ minHeight: "80px", height: isMenuOpen ? "auto" : "80px" }}
     >
       {/* Gradient Canvas Background */}
       <canvas
         id="gradient-canvas"
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className="absolute pointer-events-none"
         style={{
           width: "200%",
           height: "160px",
@@ -107,19 +109,22 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden py-4 border-t border-white border-opacity-20 bg-black bg-opacity-20 backdrop-blur-sm relative z-10"
+            className="md:hidden py-4 px-4 border-t border-white border-opacity-20 bg-black bg-opacity-40 backdrop-blur-md relative z-10"
           >
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-white hover:text-blue-200 font-medium"
+                className="block py-3 px-2 text-white hover:text-blue-200 font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <button className="w-full mt-4 bg-white bg-opacity-20 backdrop-blur-sm text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-30 transition-all duration-300">
+            <button
+              className="w-full mt-4 bg-white bg-opacity-20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold hover:bg-opacity-30 transition-all duration-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Get Started
             </button>
           </motion.div>
