@@ -36,9 +36,9 @@ const Contact = () => {
       icon: Mail,
       title: "Email Us",
       details: [
-        "info@eduvibe.com",
-        "admissions@eduvibe.com",
-        "support@eduvibe.com",
+        "info@RaviTejaSite.com",
+        "admissions@RaviTejaSite.com",
+        "support@RaviTejaSite.com",
       ],
       gradient: "from-purple-500 to-pink-500",
     },
@@ -291,7 +291,7 @@ const Contact = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="EduVibe Location"
+                title="RaviTejaSite Location"
                 className="w-full h-96"
               ></iframe>
               <div className="p-4 bg-gray-50 border-t">

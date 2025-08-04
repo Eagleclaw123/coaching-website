@@ -65,7 +65,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-white bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm">
               <BookOpen className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-white">EduVibe</span>
+            <span className="text-2xl font-bold text-white">RaviTejaSite</span>
           </motion.div>
 
           {/* Desktop Navigation */}

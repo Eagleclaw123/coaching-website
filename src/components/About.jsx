@@ -41,7 +41,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            About <span className="gradient-text">EduVibe</span>
+            About <span className="gradient-text">RaviTejaSite</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We're more than just a coaching institute. We're your partners in
@@ -62,7 +62,7 @@ const About = () => {
           >
             <h3 className="text-3xl font-bold text-gray-800">Our Story</h3>
             <p className="text-gray-600 leading-relaxed">
-              Founded in 2015, EduVibe started with a simple mission: to make
+              Founded in 2015, RaviTejaSite started with a simple mission: to make
               quality education accessible to everyone. What began as a small
               coaching center has now grown into a leading educational
               institution that has helped over 10,000 students achieve their

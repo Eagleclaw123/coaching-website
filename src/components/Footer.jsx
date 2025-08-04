@@ -48,7 +48,7 @@ const Footer = () => {
       {/* Background Decorations */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-5 -ml-32 -mt-32" />
       <div className="absolute bottom-0 right-0 w-48 h-48 bg-gradient-to-br from-pink-500 to-red-500 rounded-full opacity-5 -mr-24 -mb-24" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full opacity-3" />
+      {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full opacity-3" /> */}
 
       <div className="relative z-10">
         {/* Main Footer Content */}
@@ -68,7 +68,7 @@ const Footer = () => {
                   <BookOpen className="w-7 h-7 text-white" />
                 </div>
                 <span className="text-3xl font-bold gradient-text">
-                  EduVibe
+                  RaviTejaSite
                 </span>
               </div>
 
@@ -220,8 +220,8 @@ const Footer = () => {
                 className="text-gray-300 text-center md:text-left"
               >
                 <p>
-                  &copy; 2024 EduVibe. All rights reserved. | Privacy Policy |
-                  Terms of Service
+                  &copy; 2024 RaviTejaSite. All rights reserved. | Privacy
+                  Policy | Terms of Service
                 </p>
               </motion.div>
 
